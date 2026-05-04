@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-html-app1
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>app1</title>
+    </head>
+    <body>
+        <h1>Hello world!</h1>
+    </body>
+    </html>
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-html-app2
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>app2</title>
+    </head>
+    <body>
+        <h1>Hello app2! Voici l'application Haute Disponibilite.</h1>
+    </body>
+    </html>
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-html-app3
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>app3</title>
+    </head>
+    <body>
+        <h1>Hello app3!</h1>
+    </body>
+    </html>
