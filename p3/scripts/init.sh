@@ -17,7 +17,7 @@ kubectl wait --for=condition=ready pod --all --namespace=$NAMESPACE --timeout=60
 
 if [ $? -eq 0 ]; then
     echo "Connexion d'ArgoCD au depot Git..."
-    kubectl apply -f ../confs/application.yml
+    kubectl apply -f /confs/application.yml # Attention cela depends d'ou on lance le script
     echo "ArgoCD est configure et synchronise avec ton GitHub !"
 
     echo "Ouverture du port pour l'interface web (en arriere-plan)..."
